@@ -1,0 +1,179 @@
+:root{
+  --ink:#2e2a24;
+  --ink-soft:#766b5c;
+  --gold:#b08d57;
+  --gold-deep:#8c6a3f;
+  --line:#e2d9c8;
+  --bg:#faf7f0;
+  --card:#ffffff;
+  --error:#b3432f;
+  --error-bg:#fbeae6;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:15px;
+  line-height:1.5;
+}
+.wrap{max-width:720px;margin:0 auto;padding:32px 20px 80px}
+
+.page-header{margin-bottom:28px}
+.eyebrow{
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-size:11.5px;
+  color:var(--ink-soft);
+  margin:0 0 6px;
+}
+h1{font-size:26px;margin:0 0 10px}
+.intro{color:var(--ink-soft);font-size:13.5px;max-width:560px}
+.intro code{background:#eee3cf;padding:1px 5px;border-radius:3px;font-size:12.5px}
+
+fieldset{
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:var(--card);
+  padding:18px 20px 22px;
+  margin:0 0 20px;
+}
+legend{
+  font-weight:600;
+  font-size:14px;
+  padding:0 6px;
+  color:var(--gold-deep);
+}
+
+label{
+  display:block;
+  font-size:13px;
+  color:var(--ink-soft);
+  margin-bottom:14px;
+}
+label:last-child{margin-bottom:0}
+.req{color:var(--error)}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="file"],
+textarea{
+  display:block;
+  width:100%;
+  margin-top:6px;
+  font-family:inherit;
+  font-size:14px;
+  color:var(--ink);
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:5px;
+  padding:9px 11px;
+}
+input:focus,textarea:focus{outline:none;border-color:var(--gold)}
+textarea{resize:vertical}
+
+input.invalid,textarea.invalid{border-color:var(--error);background:var(--error-bg)}
+
+.hint{display:block;color:var(--ink-soft);font-size:11.5px;margin-top:4px;font-weight:400}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0 16px;margin-top:14px}
+@media (max-width:560px){
+  .grid-2,.grid-3{grid-template-columns:1fr}
+}
+
+.thumb{
+  display:block;
+  margin-top:8px;
+  max-width:120px;
+  max-height:120px;
+  border-radius:4px;
+  border:1px solid var(--line);
+  object-fit:cover;
+}
+
+.famille-block{
+  display:grid;
+  grid-template-columns:1fr 2fr auto;
+  gap:10px;
+  align-items:end;
+  border-top:1px solid var(--line);
+  padding-top:14px;
+  margin-top:14px;
+}
+.famille-block:first-child{border-top:none;padding-top:0;margin-top:0}
+.famille-block label{margin-bottom:0}
+@media (max-width:560px){
+  .famille-block{grid-template-columns:1fr}
+}
+
+.btn-remove{
+  height:38px;
+  padding:0 12px;
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--error);
+  border-radius:5px;
+  cursor:pointer;
+  font-size:13px;
+}
+.btn-remove:disabled{opacity:.4;cursor:not-allowed}
+
+.btn-secondary{
+  margin-top:16px;
+  background:#fff;
+  border:1px solid var(--gold);
+  color:var(--gold-deep);
+  padding:9px 16px;
+  border-radius:999px;
+  font-size:13px;
+  cursor:pointer;
+}
+
+.swatch-row{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px}
+.swatch-item{position:relative;display:flex;flex-direction:column;align-items:center;gap:6px;font-size:11px;color:var(--ink-soft)}
+.swatch-item input[type="color"]{
+  width:44px;height:44px;border:1px solid var(--line);border-radius:50%;padding:0;cursor:pointer;
+}
+.btn-remove-color{
+  position:absolute;
+  top:-6px;right:-6px;
+  width:18px;height:18px;
+  border-radius:50%;
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--error);
+  font-size:12px;
+  line-height:1;
+  padding:0;
+  cursor:pointer;
+}
+.btn-remove-color:disabled{opacity:.4;cursor:not-allowed}
+
+.preview{color:var(--ink-soft);font-size:13px;margin:10px 0 0}
+
+.actions{text-align:center;margin-top:8px}
+.btn-primary{
+  background:var(--gold-deep);
+  color:#fff;
+  border:none;
+  padding:14px 36px;
+  border-radius:999px;
+  font-size:15px;
+  letter-spacing:.02em;
+  cursor:pointer;
+}
+.btn-primary:active{transform:translateY(1px)}
+
+.error-summary{
+  background:var(--error-bg);
+  border:1px solid var(--error);
+  color:var(--error);
+  border-radius:6px;
+  padding:14px 18px;
+  margin-bottom:20px;
+  font-size:13.5px;
+}
+.error-summary ul{margin:8px 0 0;padding-left:20px}
