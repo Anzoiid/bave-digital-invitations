@@ -1,0 +1,24 @@
+/* ============================================================
+   BASE — reset et typographie globale.
+   Ne contient aucune couleur en dur : tout passe par les
+   variables définies dans un fichier theme-*.css (voir
+   theme-ivory-gold.css pour le thème actuel).
+   ============================================================ */
+*{box-sizing:border-box}
+
+body{
+  background:var(--bg-ivory);
+  color:var(--ink);
+  margin:0;
+  font-family:"Jost","Helvetica Neue",Arial,sans-serif;
+  font-weight:300;
+  font-size:15px;
+  line-height:1.65;
+  letter-spacing:.012em;
+  padding-left:max(16px, env(safe-area-inset-left,0px));
+  padding-right:max(16px, env(safe-area-inset-right,0px));
+}
+h1,h2,.serif{font-family:"Playfair Display","Georgia",serif;font-weight:500}
+.script{font-family:"Parisienne",cursive;font-weight:400}
+img{max-width:100%}
+[hidden]{display:none!important}

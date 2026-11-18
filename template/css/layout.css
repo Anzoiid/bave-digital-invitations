@@ -1,0 +1,41 @@
+/* ============================================================
+   LAYOUT — structure de page et rythme vertical.
+   Colonne unique centrée (max 480px), défilement vertical.
+   ============================================================ */
+.page{
+  max-width:460px;
+  margin:0 auto;
+  padding-block:24px 64px;
+  display:flex;
+  flex-direction:column;
+  gap:46px;
+  position:relative;
+}
+
+#invitation{
+  display:flex;
+  flex-direction:column;
+  gap:46px;
+  opacity:0;
+  transform:translateY(14px);
+  transition:opacity .5s ease, transform .5s ease;
+}
+#invitation.visible{opacity:1;transform:translateY(0)}
+
+.eyebrow{
+  text-align:center;
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  font-size:11.5px;
+  color:var(--ink-soft);
+  margin:0 0 6px;
+}
+.title-names{
+  text-align:center;
+  font-size:30px;
+  margin:0 0 20px;
+}
+
+@media (prefers-reduced-motion: reduce){
+  #invitation{transition:none}
+}
